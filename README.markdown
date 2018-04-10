@@ -232,7 +232,7 @@ The next sequence nice to follow:
 
 ### Protocol Conformance
 
-In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
+In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. We accompany the protocols with MARK. Before MARK, we put two empty lines.
 
 **Preferred:**
 ```swift
@@ -240,10 +240,12 @@ class MyViewController: UIViewController {
   // class stuff here
 }
 
+
 // MARK: - UITableViewDataSource
 extension MyViewController: UITableViewDataSource {
   // table view data source methods
 }
+
 
 // MARK: - UIScrollViewDelegate
 extension MyViewController: UIScrollViewDelegate {
@@ -518,18 +520,16 @@ func reticulateSplines(
 
 The same rule applied for function calls.
 
-Leave two empty lines between functions and one after `MARK`s.
+Leave one empty lines between functions and one after `MARK`s.
 
 ```swift
 func colorView() {
     //...
 }
 
-
 func reticulate() {
     //...
 }
-
 
 // MARK: - Private
 
