@@ -21,7 +21,7 @@ Our overarching goals are clarity, consistency and brevity, in that order.
   * [Unused Code](#unused-code)
   * [Minimal Imports](#minimal-imports)
 * [Spacing](#spacing)
-* [Marks in the classes](#marks-in-the-classes)
+* [MARKs in the classes](#marks-in-the-classes)
 * [Comments](#comments)
 * [Classes and Structures](#classes-and-structures)
   * [Use of Self](#use-of-self)
@@ -233,7 +233,7 @@ The next sequence nice to follow:
 
 ### Protocol Conformance
 
-In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. We accompany the protocols with MARK. Before extension we put tow empty lines.
+In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. We accompany the protocols with MARK. Before extension we put two empty lines.
 
 **Preferred:**
 ```swift
@@ -304,7 +304,7 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 
 Keep imports minimal. For example, don't import `UIKit` when importing `Foundation` will suffice.
 
-## Marks in the classes
+## MARKs in the classes
 
 If you want to make your code more understandable, you will separate your class with MARKs. When you make your first MARK after class defenition, you put only one empty string. But after that, when you are putting next MARK, you must separete it with two empty lines. 
 
