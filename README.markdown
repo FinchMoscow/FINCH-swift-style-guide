@@ -1,4 +1,4 @@
-# The Official Finch Swift Style Guide.
+# The Official Finch ~~Raywenderlich.com~~ Swift Style Guide.
 
 This style guide is different from others you may see, because the focus is centered on readability for print and the web. We created this style guide to keep the code in our books, tutorials, and starter kits nice and consistent — even though we have many different authors working on the books.
 
@@ -21,6 +21,7 @@ Our overarching goals are clarity, consistency and brevity, in that order.
   * [Unused Code](#unused-code)
   * [Minimal Imports](#minimal-imports)
 * [Spacing](#spacing)
+* [Marks in the classes](#marks-in-the-classes)
 * [Comments](#comments)
 * [Classes and Structures](#classes-and-structures)
   * [Use of Self](#use-of-self)
@@ -232,13 +233,14 @@ The next sequence nice to follow:
 
 ### Protocol Conformance
 
-In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. We accompany the protocols with MARK. After the class and before first extension, we put only one emty lines, but between two extensions we put two empty lines
+In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. We accompany the protocols with MARK. Before extension we put tow empty lines.
 
 **Preferred:**
 ```swift
 class MyViewController: UIViewController {
   // class stuff here
 }
+
 
 // MARK: - UITableViewDataSource
 extension MyViewController: UITableViewDataSource {
@@ -301,6 +303,26 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 ### Minimal Imports
 
 Keep imports minimal. For example, don't import `UIKit` when importing `Foundation` will suffice.
+
+## Marks in the classes
+
+If you want to make your code more understandable, you will separate your class with MARKs. When you make your first MARK after class defenition, you put only one empty string. But after that, when you are putting next MARK, you must separete it with two empty lines. 
+
+Example: 
+```swift
+class ViewController: UIViewController {
+	
+	// MARK: - Public Properties 
+	
+	var presenter: ViewControllerOutput?
+	
+	
+	// MARK: - Private Properties
+	
+	private let headerView: UIView?
+	...
+}
+```
 
 ## Spacing
 
