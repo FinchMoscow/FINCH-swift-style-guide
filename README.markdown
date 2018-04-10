@@ -57,7 +57,7 @@ Strive to make your code compile without warnings. This rule informs many style 
 
 ## Page guide
 
-Setup page guide in Xcode for 120 symbols. This number is recommended in swiftlint settings. So all code should be inside this page guide.
+Setup page guide in Xcode for 180 symbols. This number is recommended in swiftlint settings. So all code should be inside this page guide.
 
 ## Naming
 
@@ -306,9 +306,11 @@ Keep imports minimal. For example, don't import `UIKit` when importing `Foundati
 
 ## MARKs in the classes
 
-If you want to make your code more understandable, you will separate your class with MARKs. When you make your first MARK after class defenition, you put only one empty string. But after that, when you are putting next MARK, you must separete it with two empty lines. 
+If you want to make your code more understandable, you will separate your class with MARKs. When you make your first MARK after class defenition, you put only one empty string. But after that, when you are putting next MARK, you must separate it with two empty lines. 
 
 Example: 
+
+**Preferred:**
 ```swift
 class ViewController: UIViewController {
 	
@@ -323,6 +325,24 @@ class ViewController: UIViewController {
 	...
 }
 ```
+
+**Not Preferred:**
+```swift
+class ViewController: UIViewController {
+	
+	
+	// MARK: - Public Properties 
+	
+	
+	var presenter: ViewControllerOutput?
+	
+	// MARK: - Private Properties
+	
+	private let headerView: UIView?
+	...
+}
+```
+
 
 ## Spacing
 
@@ -541,7 +561,7 @@ func reticulateSplines(
 
 The same rule applied for function calls.
 
-Leave one empty lines between functions and one after `MARK`s.
+Leave one empty line between functions and one after `MARK`s.
 
 ```swift
 func colorView() {
