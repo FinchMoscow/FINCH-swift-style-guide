@@ -1,4 +1,4 @@
-# The Official raywenderlich.com Swift Style Guide.
+# The Official Finch Swift Style Guide.
 
 This style guide is different from others you may see, because the focus is centered on readability for print and the web. We created this style guide to keep the code in our books, tutorials, and starter kits nice and consistent — even though we have many different authors working on the books.
 
@@ -232,14 +232,13 @@ The next sequence nice to follow:
 
 ### Protocol Conformance
 
-In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. We accompany the protocols with MARK. Before MARK, we put two empty lines.
+In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods. We accompany the protocols with MARK. After the class and before first extension, we put only one emty lines, but between two extensions we put two empty lines
 
 **Preferred:**
 ```swift
 class MyViewController: UIViewController {
   // class stuff here
 }
-
 
 // MARK: - UITableViewDataSource
 extension MyViewController: UITableViewDataSource {
