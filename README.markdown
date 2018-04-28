@@ -786,18 +786,18 @@ let names = [String]()
 
 #### Type Annotation for Empty Arrays and Dictionaries
 
-For empty arrays and dictionaries, don't use type annotation.
+For empty arrays and dictionaries you should use type annotation.
 
 **Preferred:**
 ```swift
-var names = [String]()
-var lookup = [String: Int]()
+var names: [String] = []
+var lookup: [String: Int] = []
 ```
 
 **Not Preferred:**
 ```swift
-var names: [String] = []
-var lookup: [String: Int] = [:]
+var names = [String]()
+var lookup = [String: Int]()
 ```
 
 **NOTE**: Following this guideline means picking descriptive names is even more important than before.
